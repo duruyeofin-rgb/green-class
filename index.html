@@ -741,17 +741,17 @@
           </div>
 
           {/* 메인 나무 일러스트 (단계별 고화질 이미지) */}
-          <div className="relative w-full max-w-[650px] h-full flex flex-col items-center justify-end pb-2 px-2 overflow-visible">
+          <div className="relative w-full max-w-[750px] h-full flex flex-col items-center justify-end pb-14 sm:pb-20 px-4 overflow-visible">
             
             {/* 1단계: 아기 새싹 */}
             <img 
               src="./seedling.jpg" 
               alt="1단계 아기 새싹" 
               style={{ mixBlendMode: 'multiply' }}
-              className={`absolute top-[40%] bottom-10 sm:bottom-14 left-0 right-0 mx-auto w-full object-contain mix-blend-multiply transition-all duration-1000 ease-in-out origin-bottom drop-shadow-xl ${stage === 1 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
+              className={`w-auto h-auto max-w-[60%] max-h-[50%] object-contain transition-all duration-1000 ease-in-out origin-bottom drop-shadow-xl ${stage === 1 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none absolute'}`} 
             />
             {stage === 1 && (
-              <div className="absolute bottom-2 z-20 bg-amber-100/95 border-2 border-amber-400 text-amber-950 px-3 py-1 sm:px-5 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-lg shadow-sm text-center animate-pop-in">
+              <div className="absolute bottom-3 sm:bottom-5 z-20 bg-amber-100/95 border-2 border-amber-400 text-amber-950 px-3 py-1 sm:px-5 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-lg shadow-sm text-center animate-pop-in">
                 흙 속에서 파릇파릇 아기 새싹이 돋아났어요! 🌱
               </div>
             )}
@@ -761,10 +761,10 @@
               src="./sapling.jpg" 
               alt="2단계 어린 나무" 
               style={{ mixBlendMode: 'multiply' }}
-              className={`absolute top-[25%] bottom-10 sm:bottom-14 left-0 right-0 mx-auto w-full object-contain mix-blend-multiply transition-all duration-1000 ease-in-out origin-bottom drop-shadow-xl ${stage === 2 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
+              className={`w-auto h-auto max-w-[80%] max-h-[70%] object-contain transition-all duration-1000 ease-in-out origin-bottom drop-shadow-xl ${stage === 2 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none absolute'}`} 
             />
             {stage === 2 && (
-              <div className="absolute bottom-2 z-20 bg-emerald-100/95 border-2 border-emerald-400 text-emerald-950 px-3 py-1 sm:px-5 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-lg shadow-sm text-center animate-pop-in">
+              <div className="absolute bottom-3 sm:bottom-5 z-20 bg-emerald-100/95 border-2 border-emerald-400 text-emerald-950 px-3 py-1 sm:px-5 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-lg shadow-sm text-center animate-pop-in">
                 줄기가 굵어지고 싱그러운 잎이 쑥쑥 자라요! 🌿
               </div>
             )}
@@ -774,10 +774,10 @@
               src="./tree.jpg" 
               alt="3단계 큰 나무" 
               style={{ mixBlendMode: 'multiply' }}
-              className={`absolute top-[10%] bottom-10 sm:bottom-14 left-0 right-0 mx-auto w-full object-contain mix-blend-multiply transition-all duration-1000 ease-in-out origin-bottom drop-shadow-2xl ${stage === 3 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
+              className={`w-auto h-auto max-w-[95%] max-h-[90%] object-contain transition-all duration-1000 ease-in-out origin-bottom drop-shadow-2xl ${stage === 3 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none absolute'}`} 
             />
             {stage === 3 && (
-              <div className="absolute bottom-2 z-20 bg-teal-100/95 border-2 border-teal-400 text-teal-950 px-3 py-1 sm:px-5 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-lg shadow-sm text-center animate-pop-in">
+              <div className="absolute bottom-3 sm:bottom-5 z-20 bg-teal-100/95 border-2 border-teal-400 text-teal-950 px-3 py-1 sm:px-5 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-lg shadow-sm text-center animate-pop-in">
                 우와! 잎이 무성한 멋진 큰 나무가 되었어요! 🌳
               </div>
             )}
@@ -787,10 +787,10 @@
               src="./apple_tree.jpg" 
               alt="4단계 열매 나무" 
               style={{ mixBlendMode: 'multiply' }}
-              className={`absolute top-2 bottom-10 sm:bottom-14 left-0 right-0 mx-auto w-full object-contain mix-blend-multiply transition-all duration-1000 ease-in-out origin-bottom drop-shadow-2xl ${stage === 4 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
+              className={`w-auto h-auto max-w-full max-h-full object-contain transition-all duration-1000 ease-in-out origin-bottom drop-shadow-2xl ${stage === 4 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none absolute'}`} 
             />
             {stage === 4 && (
-              <div className="absolute bottom-2 z-20 bg-gradient-to-r from-amber-200 via-yellow-200 to-amber-200 border-2 sm:border-3 border-amber-400 text-amber-950 px-4 py-1 sm:px-6 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-xl shadow-lg animate-pulse text-center">
+              <div className="absolute bottom-3 sm:bottom-5 z-20 bg-gradient-to-r from-amber-200 via-yellow-200 to-amber-200 border-2 sm:border-3 border-amber-400 text-amber-950 px-4 py-1 sm:px-6 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-xl shadow-lg animate-pulse text-center">
                 🎉 열매가 주렁주렁 열린 완벽한 나무 완성! 🍎✨
               </div>
             )}
