@@ -747,7 +747,7 @@
             <img 
               src="./seedling.jpg" 
               alt="1단계 아기 새싹" 
-              className={`absolute bottom-8 sm:bottom-12 object-contain transition-all duration-1000 ease-in-out origin-bottom max-h-[170px] sm:max-h-[220px] md:max-h-[260px] drop-shadow-xl ${stage === 1 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
+              className={`absolute bottom-8 sm:bottom-12 object-contain mix-blend-multiply transition-all duration-1000 ease-in-out origin-bottom max-h-[170px] sm:max-h-[220px] md:max-h-[260px] drop-shadow-xl ${stage === 1 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
             />
             {stage === 1 && (
               <div className="absolute bottom-2 bg-amber-100/95 border-2 border-amber-400 text-amber-950 px-3 py-1 sm:px-5 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-lg shadow-sm text-center animate-pop-in">
@@ -759,7 +759,7 @@
             <img 
               src="./sapling.jpg" 
               alt="2단계 어린 나무" 
-              className={`absolute bottom-8 sm:bottom-12 object-contain transition-all duration-1000 ease-in-out origin-bottom max-h-[190px] sm:max-h-[250px] md:max-h-[290px] drop-shadow-xl ${stage === 2 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
+              className={`absolute bottom-8 sm:bottom-12 object-contain mix-blend-multiply transition-all duration-1000 ease-in-out origin-bottom max-h-[190px] sm:max-h-[250px] md:max-h-[290px] drop-shadow-xl ${stage === 2 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
             />
             {stage === 2 && (
               <div className="absolute bottom-2 bg-emerald-100/95 border-2 border-emerald-400 text-emerald-950 px-3 py-1 sm:px-5 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-lg shadow-sm text-center animate-pop-in">
@@ -771,7 +771,7 @@
             <img 
               src="./tree.jpg" 
               alt="3단계 큰 나무" 
-              className={`absolute bottom-8 sm:bottom-12 object-contain transition-all duration-1000 ease-in-out origin-bottom max-h-[210px] sm:max-h-[270px] md:max-h-[320px] drop-shadow-2xl ${stage === 3 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
+              className={`absolute bottom-8 sm:bottom-12 object-contain mix-blend-multiply transition-all duration-1000 ease-in-out origin-bottom max-h-[210px] sm:max-h-[270px] md:max-h-[320px] drop-shadow-2xl ${stage === 3 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
             />
             {stage === 3 && (
               <div className="absolute bottom-2 bg-teal-100/95 border-2 border-teal-400 text-teal-950 px-3 py-1 sm:px-5 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-lg shadow-sm text-center animate-pop-in">
@@ -783,7 +783,7 @@
             <img 
               src="./apple_tree.jpg" 
               alt="4단계 열매 나무" 
-              className={`absolute bottom-8 sm:bottom-12 object-contain transition-all duration-1000 ease-in-out origin-bottom max-h-[220px] sm:max-h-[290px] md:max-h-[340px] drop-shadow-2xl ${stage === 4 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
+              className={`absolute bottom-8 sm:bottom-12 object-contain mix-blend-multiply transition-all duration-1000 ease-in-out origin-bottom max-h-[220px] sm:max-h-[290px] md:max-h-[340px] drop-shadow-2xl ${stage === 4 ? 'opacity-100 scale-100 delay-300' : 'opacity-0 scale-90 pointer-events-none'}`} 
             />
             {stage === 4 && (
               <div className="absolute bottom-2 bg-gradient-to-r from-amber-200 via-yellow-200 to-amber-200 border-2 sm:border-3 border-amber-400 text-amber-950 px-4 py-1 sm:px-6 sm:py-1.5 rounded-full font-black font-jua text-xs sm:text-base md:text-xl shadow-lg animate-pulse text-center">
@@ -1035,16 +1035,18 @@
     function PraiseToast({ message, isVisible, icon = '⭐' }) {
       if (!isVisible) return null;
       return (
-        <div className="fixed inset-0 pointer-events-none z-40 flex items-center justify-center p-4">
-          <div className="relative animate-pop-in bg-gradient-to-b from-amber-300 via-yellow-200 to-amber-300 border-4 sm:border-6 border-white rounded-3xl sm:rounded-[3rem] px-6 py-5 sm:px-12 sm:py-8 shadow-[0_20px_50px_rgba(0,0,0,0.3)] flex flex-col items-center text-center max-w-sm sm:max-w-md">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center text-4xl sm:text-5xl shadow-md border-3 border-amber-300 mb-2 animate-bounce">
+        <div className="fixed inset-0 pointer-events-none z-40 flex items-start justify-center pt-24 sm:pt-28 p-4">
+          <div className="relative animate-pop-in bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300 border-3 border-white rounded-full px-5 py-3 sm:px-8 sm:py-4 shadow-xl flex flex-row items-center gap-3 sm:gap-4 max-w-sm sm:max-w-md">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-full flex items-center justify-center text-2xl sm:text-3xl shadow-md border-2 border-amber-300 flex-shrink-0 animate-bounce">
               {icon}
             </div>
-            <h2 className="text-2xl sm:text-4xl font-black text-amber-950 font-jua tracking-tight leading-tight">
-              {message || '참 잘했어요!'}
-            </h2>
-            <div className="mt-1.5 bg-white/85 px-4 py-1 rounded-full border border-amber-400 font-jua text-emerald-800 text-sm sm:text-lg font-bold shadow-xs">
-              🌱 지구를 지키는 점수 +1점! 🌱
+            <div className="flex flex-col items-start text-left">
+              <h2 className="text-lg sm:text-xl font-black text-amber-950 font-jua tracking-tight leading-tight">
+                {message || '참 잘했어요!'}
+              </h2>
+              <div className="mt-0.5 bg-white/90 px-2 py-0.5 rounded-full border border-amber-400 font-jua text-emerald-800 text-[10px] sm:text-xs font-bold shadow-xs">
+                🌱 지구를 지키는 점수 +1점!
+              </div>
             </div>
           </div>
         </div>
