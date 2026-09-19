@@ -1,0 +1,14 @@
+# 환경변수와 비밀키 파일
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# 이 웹앱 배포에 필요 없는 엑셀 파일
+*.xlsx
+*.xls
+
+# 개발용 설치 폴더
+node_modules/
